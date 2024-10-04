@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .category {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #a8e6a1;
+            border-radius: 5px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+        .edit-button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .edit-button:hover {
+            background-color: darkorange;
+        }
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .delete-button:hover {
+            background-color: darkred;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Управление товарами</h1>
+
+<div class="category">
+    <h2>Anime</h2>
+    <ul id="anime-items"></ul>
+    <div class="form-container" id="anime-form">
+        <input type="text" id="anime-name" placeholder="Название товара">
+        <input type="number" id="anime-price" placeholder="Цена товара">
+        <input type="text" id="anime-quantity" placeholder="Количество товара (например, 10+5)">
+        <button onclick="addItem('anime')">Добавить товар</button>
+    </div>
+</div>
+
+<div class="category">
+    <h2>K-Pop</h2>
+    <ul id="kpop-items"></ul>
+    <div class="form-container" id="kpop-form">
+        <input type="text" id="kpop-name" placeholder="Название товара">
+        <input type="number" id="kpop-price" placeholder="Цена товара">
+        <input type="text" id="kpop-quantity" placeholder="Количество товара (например, 10+5)">
+        <button onclick="addItem('kpop')">Добавить товар</button>
+    </div>
+</div>
+
+<div class="category">
+    <h2>Yaoi</h2>
+    <ul id="yaoi-items"></ul>
+    <div class="form-container" id="yaoi-form">
+        <input type="text" id="yaoi-name" placeholder="Название товара">
+        <input type="number" id="yaoi-price" placeholder="Цена товара">
+        <input type="text" id="yaoi-quantity" placeholder="Количество товара (например, 10+5)">
+        <button onclick="addItem('yaoi')">Добавить товар</button>
+    </div>
+</div>
+
+<h2>Сохранённые товары:</h2>
+<ul id="saved-items"></ul>
+<button onclick="deleteAllItems()">Удалить все товары</button>
+
+<script src="scriptCat.js"></script>
+</body>
+</html>
